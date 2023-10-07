@@ -6,7 +6,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
 
-    const { createUser, updateUser } = useContext(AuthContext);
+    const { createUser, setNameAndPhoto } = useContext(AuthContext);
 
     //form submit function
     const handleRegister = e => {
@@ -18,32 +18,19 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
 
-        console.log(name, photo, email, password);
 
-
-  
-        
         // create a new user with firebase
         createUser(email, password)
-            .then(result => {
-                console.log("singed in");
-            
-                updateProfile(auth.currentUser, {
-                    displayName: "Jane Q. User", photoURL: "https://example.com/jane-q-user/profile.jpg"
-                  }).then(() => {
-                    // Profile updated!
-                    // ...
-                  }).catch((error) => {
-                    // An error occurred
-                    // ...
-                  });
-
-
-
-            })
-            .catch(error => {
-                console.error(error);
-        })
+            .then()
+            .catch((error) => {
+                console.log(error);
+              });
+        
+        // update new user name and photo
+        setNameAndPhoto({
+            displayName: name,
+            photoURL: photo
+            });
     }
 
 

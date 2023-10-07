@@ -11,28 +11,34 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [nameAndPhoto, setNameAndPhoto] = useState({});
+    
 
     //email and password authentication
     const createUser = (email, password) => {  
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
-    const updateUser = (name) => {
-        return updateProfile(auth.currentUser, {
-            displayName: name
-          }).then().catch();
-    }
 
     //login authentication
-
     const signIn = (email, password,) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
 
+     //Update Name after register
+    //As per firebase doc user logged in when register complete
+    //So updateProfile method need to use to update displayName
+    updateProfile(auth.currentUser, nameAndPhoto)
+        .then()
+        .catch((error) => {
+            console.log(error);
+          });
+    
+    
 
 
     const userDetails = auth.currentUser;
- console.log(userDetails);
+        console.log(userDetails);
 
 
     //log out authentication
@@ -51,7 +57,7 @@ const AuthProvider = ({ children }) => {
     }, [])
 
 
-    const authInfo = { user, createUser, signIn, userDetails, logOut, updateUser }
+    const authInfo = { user, createUser, signIn, userDetails, logOut, setNameAndPhoto }
     return (
         <AuthContext.Provider value={authInfo}>
             {children}
