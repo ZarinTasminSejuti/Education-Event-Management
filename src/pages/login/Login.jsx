@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Login = () => {
@@ -9,12 +11,26 @@ const Login = () => {
     //     backgroundClip: 'text',
     //     color: 'transparent',
     // };
+
+    const { signIn } = useContext(AuthContext);
     
     const handleLogin = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
-        console.log(form.get('password'));
+
+        const email = form.get('email');
+        const password = form.get('password');
+        // console.log(email, password);
+
+        signIn(email, password)
+        .then(result => {
+            console.log(result);
+            })
+            .catch(error => {
+               console.error(error);
+        })
     }
+
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex">
@@ -26,6 +42,7 @@ const Login = () => {
                    
                         <h2 className="font-bold text-center text-3xl">Login into account</h2>
                         <h2 className="text-center text-gray-500 my-3 text-base">Use your credentials to access your account</h2>
+
                         <form onSubmit={handleLogin}>
                             <div className="form-control">
                                 <label className="label">
@@ -50,6 +67,7 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                         </form>
+
                         <p className="mt-5 text-center">Do not have an account?  <Link to="/register" className="text-blue-600 font-semibold">Register here</Link></p>
                     </div>
 
