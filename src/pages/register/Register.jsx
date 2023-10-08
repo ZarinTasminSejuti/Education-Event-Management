@@ -49,13 +49,12 @@ const Register = () => {
         
     }
 
-
     return (
-        <div className="hero min-h-screen">
+        <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/Svfs2fk/business-women-signature-document.jpg)'}}>
             {/* <ToastContainer /> */}
             <div className="hero-content flex">
             
-                <div className=" rounded-lg w-full mt-12 shadow-xl bg-amber-100">
+                <div className=" rounded-lg w-full mt-12 shadow-xl bg-opacity-80 bg-white">
                     <div className="card-body" >
                         <h2 className="font-bold text-center text-2xl">Create a new account</h2>
                         <h2 className="text-center text-gray-500 my-3 text-base">Enter your information to setup a new account</h2>
@@ -90,7 +89,7 @@ const Register = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Register</button>
+                                <button className="btn text-white bg-blue-600 hover:text-white hover:bg-blue-800">Register</button>
                             </div>
                         </form>
 

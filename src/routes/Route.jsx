@@ -4,6 +4,7 @@ import {
 import Root from "../layouts/Root";
 import ErrorPage from "../pages/ErrorPage";
 import Events from "../pages/events/Events";
+import Footer from "../pages/Footer";
 
 import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
         {
           path: "/serviceDetails",
           element: <ServiceDetails></ServiceDetails>,
+        },
+        {
+          path: "/footer",
+          element: <Footer></Footer>,
         }
       ]
     },

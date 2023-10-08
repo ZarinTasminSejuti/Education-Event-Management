@@ -31,7 +31,7 @@ const Navbar = () => {
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/career">Career</NavLink></li>
         <li><NavLink to="/events">Event Tickets</NavLink></li>
-        <li><NavLink to="/events">Workshop</NavLink></li>
+        <li><NavLink to="/">Workshop</NavLink></li>
     </>
 
 
@@ -58,7 +58,7 @@ const Navbar = () => {
                 {
                     user ?
                     <>
-                            <img src={userDetails.photoURL} alt={userDetails.displayName} className="w-16 rounded" />
+                            <img src={userDetails.photoURL} alt={userDetails.displayName} className="w-10 rounded" />
                           
                         <span>{userDetails.displayName}</span>
                         <button className="btn btn-ghost" onClick={handleLogOut}>Log Out</button>

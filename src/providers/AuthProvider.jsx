@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signOut  } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signOut, GoogleAuthProvider, signInWithPopup  } from "firebase/auth";
 import { useState } from "react";
 import app from "../firebase/Firebase.config";
 import PropTypes from 'prop-types';
@@ -8,6 +8,7 @@ import { useEffect } from "react";
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
+const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
@@ -28,6 +29,11 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
 
+    //google login authentication
+    const signInGoogle = () => {
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider);
+    }
      //Update Name after register
     //As per firebase doc user logged in when register complete
     //So updateProfile method need to use to update displayName
@@ -63,7 +69,7 @@ const AuthProvider = ({ children }) => {
     }, [])
 
 
-    const authInfo = { user,createUser, signIn, userDetails, logOut, setNameAndPhoto, loading }
+    const authInfo = { user,createUser, signIn, userDetails, logOut, setNameAndPhoto, loading, signInGoogle }
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

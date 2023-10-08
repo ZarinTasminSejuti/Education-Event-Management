@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import swal from 'sweetalert';
-
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
 
@@ -13,7 +13,7 @@ const Login = () => {
     //     color: 'transparent',
     // };
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInGoogle } = useContext(AuthContext);
 
     //navigate after login
     const navigate = useNavigate();
@@ -37,10 +37,21 @@ const Login = () => {
         })
     }
 
+    const handleGoogle = () => {
+        signInGoogle()
+        .then(() => {
+            swal("You're logged in!", "Login Successful!", "success");
+            navigate('/');
+            })
+            .catch(() => {
+                swal("Login Failed!", "Wrong credentials! Please login again.", "error");
+        })
+}
+
     return (
-        <div className="hero min-h-screen">
+        <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/Svfs2fk/business-women-signature-document.jpg)'}}>
             <div className="hero-content flex">
-                <div className=" rounded-lg w-full shadow-xl bg-amber-100">
+                <div className=" rounded-lg w-full mt-10 shadow-xl bg-opacity-80 bg-white">
                     <div className="card-body" >
                         {/* <div className="bg-black bg-opacity-60 rounded-md text-center py-2">
                         <a className="btn btn-ghost normal-case text-4xl" style={colorText}>EventifyEDU</a>
@@ -70,11 +81,16 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn text-white bg-blue-600 hover:text-white hover:bg-blue-800">Login</button>
                             </div>
                         </form>
 
-                        <p className="mt-5 text-center">Do not have an account?  <Link to="/register" className="text-blue-600 font-semibold">Register here</Link></p>
+                        <p className="mt-4 text-center text-gray-500">or login with</p>
+
+                        {/* google button */}
+                        <p className="text-center my-2"> <button onClick={handleGoogle} className="btn w-1/2 text-white bg-red-500 hover:bg-red-700"><FaGoogle></FaGoogle>Google</button></p>
+                        
+                        <p className="text-center">Do not have an account?  <Link to="/register" className="text-blue-600 font-semibold">Register here</Link></p>
                     </div>
 
                 </div>

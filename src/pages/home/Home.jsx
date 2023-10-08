@@ -1,3 +1,4 @@
+import Footer from "../Footer";
 import Banner from "./Banner";
 
 const Home = () => {
@@ -5,6 +6,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <Footer></Footer>
         </div>
     );
 };
