@@ -1,5 +1,5 @@
 import Data from "../../public/data.json"
-import { FaAccessibleIcon, FaAirbnb, FaBuffer, FaApple } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 const Features = () => {
  
@@ -16,7 +16,7 @@ const Features = () => {
                 <div key={index} className="flex gap-5 border-[1px] border-solid border-gray-200  p-8">
                   
                     <div className="p-5 border-[1px] border-solid border-gray-200 rounded-full">
-                    <FaAccessibleIcon className="text-5xl"></FaAccessibleIcon>
+                    <FaStar className="text-5xl text-amber-500"></FaStar>
                     </div> 
             
                   

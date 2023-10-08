@@ -22,6 +22,7 @@ const router = createBrowserRouter([
         {
           path: "/",
           element: <Home></Home>,
+          loader: () => fetch('/service.json')
         },
         {
           path: "/login",
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
           element: <PrivateRoute><Events></Events></PrivateRoute>,
         },
         {
-          path: "/serviceDetails",
+          path: "/services/:id",
           element: <ServiceDetails></ServiceDetails>,
         },
         {

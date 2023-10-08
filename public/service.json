@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/Gt5cqx8/workshop.jpg",
+      "title": "Workshops and Webinars",
+      "price": 180,
+      "paragraph": "Workshops and webinars are interactive learning experiences designed to impart knowledge, skills, and expertise in various fields. They can be conducted online or in-person, providing participants with valuable insights and practical training."
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/4RJhRrB/knowledge.jpg",
+      "title": "Knowledge Symposiums",
+      "price": 200,
+      "paragraph": "Knowledge symposiums are gatherings that bring together experts, researchers, and thought leaders to discuss and share the latest insights, research findings, and innovations within a specific industry or academic discipline."
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/L1pm0wX/teaching.jpg",
+      "title": "Teaching Workshops",
+      "price": 290,
+      "paragraph": "Teaching workshops are designed to enhance the pedagogical skills of educators and instructors. These workshops focus on effective teaching methods, classroom management, and instructional techniques to improve the learning experience for students."
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/ryqRNzf/educational.jpg",
+      "title": "Educational Conferences",
+      "price": 120,
+      "paragraph": "Educational conferences are comprehensive events that cover a wide range of educational topics and themes. They provide a platform for educators, administrators, and policymakers to exchange ideas, best practices, and innovations in education."
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/T1cL2kM/training.jpg",
+      "title": "Training Programs",
+      "price": 250,
+      "paragraph": "Training programs offer structured and systematic learning experiences to develop specific skills or competencies. They are tailored to meet the needs of individuals or organizations and can cover areas such as professional development, technical skills, or soft skills."
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/qM9ZVR5/career.jpg",
+      "title": "Career Fairs",
+      "price": 180,
+      "paragraph": "Career fairs connect job seekers with employers and educational institutions. These events provide an opportunity for individuals to explore career options, network with potential employers, and learn about educational pathways to enhance their careers."
+    }
+  ]
+  
