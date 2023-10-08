@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import swal from 'sweetalert';
 
 
 const Login = () => {
@@ -13,6 +14,9 @@ const Login = () => {
     // };
 
     const { signIn } = useContext(AuthContext);
+
+    //navigate after login
+    const navigate = useNavigate();
     
     const handleLogin = e => {
         e.preventDefault();
@@ -23,11 +27,13 @@ const Login = () => {
         // console.log(email, password);
 
         signIn(email, password)
-        .then(result => {
-            console.log(result);
+        .then(() => {
+            swal("You're logged in!", "Login Successful!", "success");
+            e.target.reset();
+            navigate('/');
             })
-            .catch(error => {
-               console.error(error);
+            .catch(() => {
+                swal("Login Failed!", "Wrong credentials! Please login again.", "error");
         })
     }
 

@@ -1,13 +1,17 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import swal from 'sweetalert';
 // import { ToastContainer, toast } from 'react-toastify';
 
 
 const Register = () => {
 
-    const { createUser, setNameAndPhoto } = useContext(AuthContext);
+    const { createUser, setNameAndPhoto, logOut } = useContext(AuthContext);
 
+ //navigate after login
+    const navigate = useNavigate();
+    
     //form submit function
     const handleRegister = e => {
         e.preventDefault();
@@ -21,7 +25,17 @@ const Register = () => {
 
         // create a new user with firebase
         createUser(email, password)
-            .then()
+            .then(() => {
+                swal("You're registered!", "Registration Successful!", "success");
+                
+                logOut().then(() => {
+                    // Sign-out and navigate to login
+                    navigate("/login");
+                  }).catch((error) => {
+                    // An error happened.
+                    console.log(error);
+                  });
+                })
             .catch((error) => {
                 console.log(error);
               });
@@ -30,7 +44,9 @@ const Register = () => {
         setNameAndPhoto({
             displayName: name,
             photoURL: photo
-            });
+        });
+
+        
     }
 
 
@@ -41,14 +57,14 @@ const Register = () => {
             
                 <div className=" rounded-lg w-full mt-12 shadow-xl bg-amber-100">
                     <div className="card-body" >
-                        <h2 className="font-bold text-center text-2xl">Register</h2>
+                        <h2 className="font-bold text-center text-2xl">Create a new account</h2>
                         <h2 className="text-center text-gray-500 my-3 text-base">Enter your information to setup a new account</h2>
 
                         <form onSubmit={handleRegister}>
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Your Name</span>
+                                    <span className="label-text">Your Name *</span>
                                 </label>
                                 <input type="text" placeholder="Name..." name="name" className="input input-bordered" required />
                             </div>
@@ -62,13 +78,13 @@ const Register = () => {
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text">Email *</span>
                                 </label>
                                 <input type="email" placeholder="Email Address..." name="email" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text">Password *</span>
                                 </label>
                                 <input type="password" placeholder="Password..." className="input input-bordered" name="password" required />
 

@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signOut  } from "firebase/auth";
 import { useState } from "react";
 import app from "../firebase/Firebase.config";
 import PropTypes from 'prop-types';
@@ -12,16 +12,19 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [nameAndPhoto, setNameAndPhoto] = useState({});
+    const [loading, setLoading] = useState(true);
     
 
     //email and password authentication
     const createUser = (email, password) => {  
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
 
     //login authentication
     const signIn = (email, password,) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
@@ -29,27 +32,30 @@ const AuthProvider = ({ children }) => {
     //As per firebase doc user logged in when register complete
     //So updateProfile method need to use to update displayName
     updateProfile(auth.currentUser, nameAndPhoto)
+        
         .then()
         .catch((error) => {
             console.log(error);
           });
     
-    
+    //log out authentication
+    const logOut = () => {
+        setLoading(true);
+        return signOut(auth);
+    }
 
 
     const userDetails = auth.currentUser;
         console.log(userDetails);
 
 
-    //log out authentication
-    const logOut = () => {
-        return signOut(auth);
-    }
+    
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             // console.log("done", currentUser);
             setUser(currentUser);
+            setLoading(false);
         });
         return () => {
             unSubscribe();
@@ -57,7 +63,7 @@ const AuthProvider = ({ children }) => {
     }, [])
 
 
-    const authInfo = { user, createUser, signIn, userDetails, logOut, setNameAndPhoto }
+    const authInfo = { user,createUser, signIn, userDetails, logOut, setNameAndPhoto, loading }
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

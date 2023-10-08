@@ -8,7 +8,7 @@ import swal from 'sweetalert';
 
 const Navbar = () => {
 
-    const { user, logOut, userDetails } = useContext(AuthContext);
+    const { logOut, userDetails, user } = useContext(AuthContext);
 // console.log(userDetails);
     const handleLogOut = () => {
         logOut()
@@ -30,6 +30,8 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/career">Career</NavLink></li>
+        <li><NavLink to="/events">Event Tickets</NavLink></li>
+        <li><NavLink to="/events">Workshop</NavLink></li>
     </>
 
 
@@ -55,17 +57,22 @@ const Navbar = () => {
             <div className="navbar-end text-white p-2 gap-3">
                 {
                     user ?
-                        <>
+                    <>
+                            <img src={userDetails.photoURL} alt={userDetails.displayName} className="w-16 rounded" />
+                          
                         <span>{userDetails.displayName}</span>
                         <button className="btn btn-ghost" onClick={handleLogOut}>Log Out</button>
-                        </>
+                    </>
                         :
+                    <>
                         <Link to="/login"><button className="btn btn-ghost">Login</button>
-                    </Link>
+                        </Link>
+                         <Link to="/register"><button className="btn btn-ghost">Register</button></Link>
+                    </>
                 }
 
 
-                <Link to="/register"><button className="btn btn-ghost">Register</button></Link>
+              
 
             </div>
         </div>

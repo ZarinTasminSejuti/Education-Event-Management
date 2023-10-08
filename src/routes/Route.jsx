@@ -3,10 +3,13 @@ import {
   } from "react-router-dom";
 import Root from "../layouts/Root";
 import ErrorPage from "../pages/ErrorPage";
+import Events from "../pages/events/Events";
 
 import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
+import ServiceDetails from "../pages/serviceDetails/ServiceDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -26,6 +29,14 @@ const router = createBrowserRouter([
         {
           path: "/register",
           element: <Register></Register>,
+        },
+        {
+          path: "/events",
+          element: <PrivateRoute><Events></Events></PrivateRoute>,
+        },
+        {
+          path: "/serviceDetails",
+          element: <ServiceDetails></ServiceDetails>,
         }
       ]
     },
