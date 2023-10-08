@@ -43,6 +43,7 @@ const Footer = () => {
 
             <div className="footer footer-center p-4 text-white">
                 <aside>
+                    
                     <p>Copyright © 2023 - All right reserved by EventifyEDU</p>
                 </aside>
             </div>
