@@ -96,7 +96,7 @@ console.log(sayHi());
 
 #### Answer: ?
 
-<i>We pass name parameter in sayHi function but we don't define any argument in name, so when we call the function the name value will be undefined.</i>
+<i>We passed 'name' parameter in sayHi function but we din't define any argument in name, so when we call the function the name value will be undefined.</i>
 
 </p>
 </details>
@@ -124,7 +124,7 @@ console.log(count);
 
 #### Answer: ?
 
-<i>Here we run forEach loop in nums array. the num variable will loop through each of array number and then check if the (num) is any of array number will true(i meant number will not be zero) then it will evaluate the (count = count + 1 ) four time. so the result will be 3 (3 times it will perform the if condition) </i>
+<i>Here we run forEach loop in nums array. the num variable will loop through each of array number and then check if the (num) is any of array number will true(i meant number will not be zero) then it will evaluate the (count = count + 1 ) for four times. so the result will be 3 (3 times it will perform the if condition) </i>
 
 </p>
 </details>

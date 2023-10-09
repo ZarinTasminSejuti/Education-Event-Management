@@ -29,7 +29,7 @@ const Navbar = () => {
     const navLinks = <>
         <li className="text-lg rounded-xl text-white hover:bg-[#ff6600]"><NavLink to="/">Home</NavLink></li>
         <li className="text-lg rounded-xl text-white hover:bg-[#ff6600]"><NavLink to="/about">About Us</NavLink></li>
-        <li className="text-lg rounded-xl text-white hover:bg-[#ff6600]"><NavLink to="/events">Event Tickets</NavLink></li>
+        <li className="text-lg rounded-xl text-white hover:bg-[#ff6600]"><NavLink to="/events">Events</NavLink></li>
         <li className="text-lg rounded-xl text-white hover:bg-[#ff6600]"><NavLink to="/checkout">CheckOut Page</NavLink></li> 
     </>
 
