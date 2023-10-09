@@ -51,7 +51,7 @@ const Login = () => {
     return (
         <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/6bKcrmL/loginbg.jpg)'}}>
             <div className="hero-content flex">
-                <div className=" rounded-lg w-full mt-10 shadow-xl bg-opacity-80 bg-white">
+                <div className=" rounded-lg w-full my-64 lg:my-32 shadow-xl bg-opacity-80 bg-white">
                     <div className="card-body" >
                         {/* <div className="bg-black bg-opacity-60 rounded-md text-center py-2">
                         <a className="btn btn-ghost normal-case text-4xl" style={colorText}>EventifyEDU</a>

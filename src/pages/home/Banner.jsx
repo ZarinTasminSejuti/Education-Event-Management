@@ -29,7 +29,7 @@ const Banner = () => {
 
         <div className="p-10 text-center relative z-10">
           <p data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom" className="text-white font-bold mt-40 lg:mt-64 text-3xl lg:text-7xl ">
+     data-aos-anchor-placement="bottom-bottom" className="text-white font-bold mt-56 lg:mt-64 text-3xl lg:text-7xl ">
             Elevate Your Events with <br />
             <span className="text-[#ff6600]">EventifyEDU</span>{" "}
           </p>

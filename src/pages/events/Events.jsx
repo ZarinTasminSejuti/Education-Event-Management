@@ -2,7 +2,7 @@ const Events = () => {
   return (
     <div>
       <div
-        className="hero h-[500px]"
+        className="hero h-full lg:h-[500px]"
         style={{
           backgroundImage:
             "url(https://i.ibb.co/Svfs2fk/business-women-signature-document.jpg)",
@@ -10,7 +10,7 @@ const Events = () => {
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
-          <div className="mt-16">
+          <div className="mt-64 lg:mt-16">
             <h2 className="mx-auto leading-10 text-3xl">
               <span className="text-[#ff6600] font-medium text-5xl">
                 Innovate to Educate
@@ -23,7 +23,7 @@ const Events = () => {
               thought-provoking and enriching experience that is designed to
               empower you
             </p>
-            <button className=" px-6 py-3 rounded-xl text-white font-medium text-lg bg-[#ff6600] hover:bg-orange-600 hover:text-white ">
+            <button className=" px-6 py-3 mb-10 lg:mb-0 rounded-xl text-white font-medium text-lg bg-[#ff6600] hover:bg-orange-600 hover:text-white ">
               Get Started
             </button>
           </div>
@@ -33,7 +33,7 @@ const Events = () => {
       
 
 
-      <div className="overflow-x-auto my-20">
+      <div className="overflow-x-auto my-32 lg:my-20">
         <table className="table">
           {/* head */}
           <thead className="text-xl">

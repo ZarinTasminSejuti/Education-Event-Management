@@ -19,7 +19,7 @@ const Statistics = () => {
      
     return (
         <div data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom" className="flex relative justify-between p-24 text-center my-10 items-center" style={{ backgroundImage: 'url(https://i.ibb.co/xSvKTR7/seminarS.jpg)' }}>
+        data-aos-anchor-placement="bottom-bottom" className="flex relative justify-between p-24 text-center bg-cover h-full my-10 items-center" style={{ backgroundImage: 'url(https://i.ibb.co/r2RgL1W/room2.jpg)' }}>
             <div style={overlayStyle}></div>
 
 

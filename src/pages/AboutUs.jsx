@@ -8,13 +8,13 @@ const AboutUs = () => {
     AOS.init();
   }, [])
   return (
-    <div className="">
+    <div>
       {/* who we are section  */}
-      <div className="hero mt-36">
+      <div className="hero mt-56 lg:mt-36 bg-gradient-to-r from-white to-orange-300">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://i.ibb.co/HhLJ399/about1.jpg"
-            className="max-w-sm rounded-lg border-2 border-orange-600 border-solid shadow-xl"
+            className="max-w-sm rounded-lg border-2 border-white border-solid shadow-xl"
             data-aos="zoom-in"
           />
           <div>
@@ -23,7 +23,7 @@ const AboutUs = () => {
               <h1 className="text-5xl font-bold">Who We Are</h1>
             </div>
 
-            <p className="py-6 text-justify w-3/4">
+            <p className="py-6 text-justify lg:w-3/4">
               We are a passionate team of educators, technologists, and event
               management experts with a shared vision: to empower educational
               institutions, businesses, and event organizers to deliver
@@ -36,15 +36,15 @@ const AboutUs = () => {
       </div>
 
       {/* our mission */}
-      <div className="hero my-28">
+      <div className="hero my-28 bg-gradient-to-r from-orange-300 to-white">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="w-3/4">
+          <div className="lg:w-3/4">
             <div className="flex gap-4 items-center">
               <strong className="bg-[#ff6600] w-1 h-7"></strong>
               <h1 className="text-5xl font-bold">Our Mission</h1>
             </div>
 
-            <p className="py-6 text-justify">
+            <p className="py-6 text-justify lg:w-3/4">
               Our mission is to bridge the gap between knowledge seekers and
               knowledge providers. We believe that education and events should
               be seamless, interactive, and tailored to individual needs.
@@ -53,10 +53,10 @@ const AboutUs = () => {
               networking, and drive success.
             </p>
           </div>
-          <div className="w-3/4">
+          <div className="lg:w-3/4">
             <img
               src="https://i.ibb.co/QcgJtjq/about02.jpg"
-              className="max-w-sm rounded-lg shadow-xl border-2 border-orange-600 border-solid "
+              className="max-w-sm rounded-lg shadow-xl border-2 border-white border-solid "
               data-aos="zoom-in"
             />
           </div>
@@ -64,11 +64,11 @@ const AboutUs = () => {
       </div>
 
       {/* who Choose Us  */}
-      <div className="hero mb-48">
+      <div className="hero mb-48 bg-gradient-to-r from-white to-orange-300">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://i.ibb.co/symDb0Y/about2.jpg"
-            className="max-w-sm rounded-lg shadow-xl border-2 border-orange-600 border-solid "
+            className="max-w-sm rounded-lg shadow-xl border-2 border-white border-solid "
             data-aos="zoom-in"
           />
           <div>
@@ -77,7 +77,7 @@ const AboutUs = () => {
               <h1 className="text-5xl font-bold">Why Choose Us</h1>
             </div>
 
-            <p className="py-6 text-justify w-3/4 leading-6">
+            <p className="py-6 text-justify lg:w-3/4 leading-6">
               <span className="text-[#ff6600] text-xl font-medium">
                 Expertise:
               </span>{" "}

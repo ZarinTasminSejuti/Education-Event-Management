@@ -15,7 +15,7 @@ const ServiceCard = ({ service }) => {
   
   return (
     <div>
-      <div  className="bg-white rounded-xl h-[600px]" data-aos="zoom-in">
+      <div  className="bg-white shadow-sm rounded-xl h-[600px]" data-aos="zoom-in">
         <img className="rounded-t-xl h-[250px] w-full" src={image} alt="" />
         <div className="px-6">
           <p className="font-normal text-2xl py-3">{title}</p>

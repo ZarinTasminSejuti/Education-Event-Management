@@ -1,9 +1,11 @@
+import Footer from "../Footer";
+
 const Checkout = () => {
   return (
-    <div className="mt-44 px-10">
+    <div className="mt-64 lg:mt-44 px-10">
       <p className="font-semibold text-2xl">Payment Details</p>
 
-      <div className="mt-8 w-1/2">
+      <div className="my-8 lg:w-1/2">
         <p className="text-xl">
           Complete your order by providing your payment details.
         </p>
@@ -40,6 +42,7 @@ const Checkout = () => {
           Place Order
         </button>
       </div>
+      <Footer></Footer>
     </div>
   );
 };
