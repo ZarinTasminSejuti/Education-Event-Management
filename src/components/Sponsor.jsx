@@ -18,11 +18,11 @@ const Sponsor = () => {
             
             <Marquee pauseOnHover={true} speed={100}>
             <div className="flex gap-28">
-                <img className="w-full h-14" src="src/assets/gpt.png" alt="" />
-                    <img src="src/assets/figma.png" alt="" />
-                    <img src="src/assets/google.png" alt="" />
-                    <img className="w-full h-14" src="src/assets/business.png" alt="" />
-                    <img src="src/assets/telerama.png" alt="" />
+                <img className="w-full h-14" src="https://i.ibb.co/ggv0dkz/gpt.png" alt="" />
+                    <img src="https://i.ibb.co/d5sGh8y/figma.png" alt="" />
+                    <img src="https://i.ibb.co/w4DC7zj/google.png" alt="" />
+                    <img className="w-full h-14" src="https://i.ibb.co/Mpb1fMX/business.png" alt="" />
+                    <img src="https://i.ibb.co/9gYQd3c/telerama.png" alt="" />
                     </div>
                 </Marquee>
 
