@@ -21,23 +21,22 @@ const Navbar = () => {
     }
 
     const colorText = {
-        background: 'linear-gradient(88deg, #f3c302, #fff, #f3c302)',
+        background: 'linear-gradient(88deg, #ff6600, #fff, #ff6600)',
         WebkitBackgroundClip: 'text',
         backgroundClip: 'text',
         color: 'transparent',
     };
     const navLinks = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/career">Career</NavLink></li>
-        <li><NavLink to="/events">Event Tickets</NavLink></li>
-        <li><NavLink to="/">Workshop</NavLink></li>
+        <li className="text-lg rounded-xl text-white hover:bg-[#ff6600]"><NavLink to="/">Home</NavLink></li>
+        <li className="text-lg rounded-xl text-white hover:bg-[#ff6600]"><NavLink to="/about">About Us</NavLink></li>
+        <li className="text-lg rounded-xl text-white hover:bg-[#ff6600]"><NavLink to="/events">Event Tickets</NavLink></li>
+        <li className="text-lg rounded-xl text-white hover:bg-[#ff6600]"><NavLink to="/checkout">CheckOut Page</NavLink></li> 
     </>
 
 
     return (
 
-        <div className="navbar bg-black bg-opacity-60 h-20 absolute z-10">
+        <div className="navbar mx-auto max-w-[1400px] bg-black bg-opacity-70 px-7 h-24 inset-x-0 top-0 absolute z-20">
              
             <div className="navbar-start text-white">
                 <div className="dropdown">
@@ -61,13 +60,13 @@ const Navbar = () => {
                             <img src={userDetails.photoURL} alt={userDetails.displayName} className="w-10 rounded" />
                           
                         <span>{userDetails.displayName}</span>
-                        <button className="btn btn-ghost" onClick={handleLogOut}>Log Out</button>
+                        <button className="btn btn-ghost hover:bg-red-600" onClick={handleLogOut}>Log Out</button>
                     </>
                         :
                     <>
-                        <Link to="/login"><button className="btn btn-ghost">Login</button>
+                        <Link to="/login"><button className="btn btn-ghost text-[#ff6600] hover:text-white hover:bg-[#ff6600]">Login</button>
                         </Link>
-                         <Link to="/register"><button className="btn btn-ghost">Register</button></Link>
+                         <Link to="/register"><button className="btn text-[#ff6600] btn-ghost hover:bg-[#ff6600] hover:text-white">Register</button></Link>
                     </>
                 }
 

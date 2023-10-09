@@ -49,7 +49,7 @@ const Login = () => {
 }
 
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/Svfs2fk/business-women-signature-document.jpg)'}}>
+        <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/6bKcrmL/loginbg.jpg)'}}>
             <div className="hero-content flex">
                 <div className=" rounded-lg w-full mt-10 shadow-xl bg-opacity-80 bg-white">
                     <div className="card-body" >
@@ -81,14 +81,14 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn text-white bg-blue-600 hover:text-white hover:bg-blue-800">Login</button>
+                                <button className="btn text-white bg-blue-600 hover:text-white border-none hover:bg-blue-800">Login</button>
                             </div>
                         </form>
 
                         <p className="mt-4 text-center text-gray-500">or login with</p>
 
                         {/* google button */}
-                        <p className="text-center my-2"> <button onClick={handleGoogle} className="btn w-1/2 text-white bg-red-500 hover:bg-red-700"><FaGoogle></FaGoogle>Google</button></p>
+                        <p className="text-center my-2"> <button onClick={handleGoogle} className="btn w-1/2 text-white border-none bg-red-500 hover:bg-red-700"><FaGoogle></FaGoogle>Google</button></p>
                         
                         <p className="text-center">Do not have an account?  <Link to="/register" className="text-blue-600 font-semibold">Register here</Link></p>
                     </div>

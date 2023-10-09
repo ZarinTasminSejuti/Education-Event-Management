@@ -50,7 +50,7 @@ const Register = () => {
     }
 
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/Svfs2fk/business-women-signature-document.jpg)'}}>
+        <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/6bKcrmL/loginbg.jpg)'}}>
             {/* <ToastContainer /> */}
             <div className="hero-content flex">
             
@@ -89,7 +89,7 @@ const Register = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn text-white bg-blue-600 hover:text-white hover:bg-blue-800">Register</button>
+                                <button className="btn text-white border-none bg-blue-600 hover:text-white hover:bg-blue-800">Register</button>
                             </div>
                         </form>
 
