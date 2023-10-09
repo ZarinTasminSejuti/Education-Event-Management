@@ -9,7 +9,8 @@ const Footer = () => {
     };
     return (
         <div className="bg-black">
-            <footer className="footer p-10 text-white">
+            <footer className="footer  p-10 text-white">
+                
                 <aside>
                     <a className="btn btn-ghost normal-case text-4xl" style={colorText}>EventifyEDU</a>
                     <p className="ml-2">An Education Management System</p>

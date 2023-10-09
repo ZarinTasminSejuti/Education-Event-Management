@@ -23,6 +23,20 @@ const Register = () => {
         const password = form.get('password');
 
 
+        //checking password validation
+        if (password.length < 6) {
+            swal("Failed!", "Password should be at least 6 Characters", "error");
+            return;
+        } else if (!/^(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).{8,}$/.test(password)) {
+            swal("Failed!", "Password need a special Characters", "error");
+            return;
+        } 
+        else if (!/[A-Z]/.test(password)) {
+            swal("Failed!", "Password need a Capital Letter", "error");
+            return;
+        }
+
+
         // create a new user with firebase
         createUser(email, password)
             .then(() => {
@@ -36,8 +50,8 @@ const Register = () => {
                     console.log(error);
                   });
                 })
-            .catch((error) => {
-                console.log(error);
+            .catch(() => {
+                swal("Failed!", "Email is already used", "error");
               });
         
         // update new user name and photo

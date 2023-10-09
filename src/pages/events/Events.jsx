@@ -29,6 +29,173 @@ const Events = () => {
           </div>
         </div>
       </div>
+
+      
+
+
+      <div className="overflow-x-auto my-20">
+        <table className="table">
+          {/* head */}
+          <thead className="text-xl">
+            <tr>
+              <th>
+                
+              </th>
+              <th>Speaker Name</th>
+              <th>Designation</th>
+              <th>Service Event</th>
+              <th>Book</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* row 1 */}
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" className="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div className="flex items-center space-x-3">
+                  <div className="avatar">
+                    <div className="mask mask-squircle w-12 h-12">
+                      <img
+                        src="https://i.ibb.co/r6k6R03/author2.jpg"
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">Hart Hagerty</div>
+                    <div className="text-sm opacity-50">United States</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Zemlak, Daniel and Leannon
+                <br />
+                <span className="badge badge-ghost badge-sm">
+                  Main Speaker
+                </span>
+              </td>
+              <td>Training Programs</td>
+              <th>
+                <button className="btn btn-ghost hover:text-[#ff6600] hover:bg-white bg-[#ff6600] text-white ">Book Now</button>
+              </th>
+            </tr>
+            {/* row 2 */}
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" className="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div className="flex items-center space-x-3">
+                  <div className="avatar">
+                    <div className="mask mask-squircle w-12 h-12">
+                      <img
+                        src="https://i.ibb.co/71c5mFJ/statistics1.jpg"
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">Brice Swyre</div>
+                    <div className="text-sm opacity-50">China</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Carroll Group
+                <br />
+                <span className="badge badge-ghost badge-sm">
+                  Assistant Speaker
+                </span>
+              </td>
+              <td>Knowledge Symposiums
+
+</td>
+              <th>
+                <button className="btn btn-ghost hover:text-[#ff6600] hover:bg-white bg-[#ff6600] text-white ">Book Now</button>
+              </th>
+            </tr>
+            {/* row 3 */}
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" className="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div className="flex items-center space-x-3">
+                  <div className="avatar">
+                    <div className="mask mask-squircle w-12 h-12">
+                      <img
+                        src="https://i.ibb.co/JHmhkDJ/author1.jpg"
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">Marjy Ferencz</div>
+                    <div className="text-sm opacity-50">Russia</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Rowe-Schoen
+                <br />
+                <span className="badge badge-ghost badge-sm">
+                  Main Speaker
+                </span>
+              </td>
+              <td>Workshops and Webinars
+
+</td>
+              <th>
+                <button className="btn btn-ghost hover:text-[#ff6600] hover:bg-white bg-[#ff6600] text-white  ">Book Now</button>
+              </th>
+            </tr>
+            {/* row 4 */}
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" className="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div className="flex items-center space-x-3">
+                  <div className="avatar">
+                    <div className="mask mask-squircle w-12 h-12">
+                      <img
+                        src="https://i.ibb.co/ryqRNzf/educational.jpg"
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">Yancy Tear</div>
+                    <div className="text-sm opacity-50">Brazil</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Wyman-Ledner
+                <br />
+                <span className="badge badge-ghost badge-sm">
+                  Professional Speaker
+                </span>
+              </td>
+              <td>Teaching Workshops</td>
+              <th>
+                <button className="btn btn-ghost hover:text-[#ff6600] hover:bg-white bg-[#ff6600] text-white ">Book Now</button>
+              </th>
+            </tr>
+          </tbody>
+          
+        </table>
+      </div>
     </div>
   );
 };

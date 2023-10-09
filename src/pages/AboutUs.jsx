@@ -1,15 +1,21 @@
 import Footer from "./Footer";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const AboutUs = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
-      <div className="">
-          
-          {/* who we are section  */}
+    <div className="">
+      {/* who we are section  */}
       <div className="hero mt-36">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://i.ibb.co/HhLJ399/about1.jpg"
             className="max-w-sm rounded-lg border-2 border-orange-600 border-solid shadow-xl"
+            data-aos="zoom-in"
           />
           <div>
             <div className="flex gap-4 items-center">
@@ -29,9 +35,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-          
-
-          {/* our mission */}
+      {/* our mission */}
       <div className="hero my-28">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="w-3/4">
@@ -53,18 +57,19 @@ const AboutUs = () => {
             <img
               src="https://i.ibb.co/QcgJtjq/about02.jpg"
               className="max-w-sm rounded-lg shadow-xl border-2 border-orange-600 border-solid "
+              data-aos="zoom-in"
             />
           </div>
         </div>
-          </div>
-          
+      </div>
 
-  {/* who Choose Us  */}
-  <div className="hero mb-48">
+      {/* who Choose Us  */}
+      <div className="hero mb-48">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://i.ibb.co/symDb0Y/about2.jpg"
             className="max-w-sm rounded-lg shadow-xl border-2 border-orange-600 border-solid "
+            data-aos="zoom-in"
           />
           <div>
             <div className="flex gap-4 items-center">
@@ -73,27 +78,34 @@ const AboutUs = () => {
             </div>
 
             <p className="py-6 text-justify w-3/4 leading-6">
-                          <span className="text-[#ff6600] text-xl font-medium">Expertise:</span>  With years of experience in education and event management, we understand your unique challenges and opportunities. <br />
-                          
-                          <span className="text-[#ff6600] text-xl font-medium">Innovation:</span> We are constantly evolving to stay ahead of industry trends and deliver the most advanced solutions.<br />
-                          
-                          <span className="text-[#ff6600] text-xl font-medium">Collaboration:</span>We work closely with our clients to tailor our services to their specific needs, ensuring success and satisfaction.<br />
-                          
-                          <span className="text-[#ff6600] text-xl font-medium">Results:</span> Our track record of successful implementations and satisfied clients speaks for itself.
+              <span className="text-[#ff6600] text-xl font-medium">
+                Expertise:
+              </span>{" "}
+              With years of experience in education and event management, we
+              understand your unique challenges and opportunities. <br />
+              <span className="text-[#ff6600] text-xl font-medium">
+                Innovation:
+              </span>{" "}
+              We are constantly evolving to stay ahead of industry trends and
+              deliver the most advanced solutions.
+              <br />
+              <span className="text-[#ff6600] text-xl font-medium">
+                Collaboration:
+              </span>
+              We work closely with our clients to tailor our services to their
+              specific needs, ensuring success and satisfaction.
+              <br />
+              <span className="text-[#ff6600] text-xl font-medium">
+                Results:
+              </span>{" "}
+              Our track record of successful implementations and satisfied
+              clients speaks for itself.
             </p>
           </div>
-              </div>
-              
+        </div>
       </div>
 
-
-
-
-
-
       <Footer></Footer>
-
-
     </div>
   );
 };
