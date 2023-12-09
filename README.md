@@ -1,7 +1,7 @@
 # EventifyEDU - An Educational Event Management System
 
 
-### Project Live Link: 
+### Project Live Link: https://eventifyedu-project.web.app/
 
 
 ## Project Features:
